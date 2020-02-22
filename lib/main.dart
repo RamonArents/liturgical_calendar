@@ -85,6 +85,9 @@ class _LiturgicalCalendarState extends State<LiturgicalCalendar> {
     else if(date.endsWith('02-14')){
       return 'images/saintcyrillus.jpg';
     }
+    else if(date.endsWith('02-22')){
+      return 'images/stpeterchair.jpg';
+    }
     else{
       return 'images/default.jpeg';
     }

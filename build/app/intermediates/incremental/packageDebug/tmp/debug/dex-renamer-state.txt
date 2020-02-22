@@ -1,4 +1,4 @@
-#Fri Feb 14 22:19:41 CET 2020
+#Sat Feb 22 16:21:14 CET 2020
 base.0=C\:\\Users\\ramon\\Desktop\\school\\flutter zelfstudie\\liturgical_calendar\\build\\app\\intermediates\\transforms\\dexMerger\\debug\\0
 path.0=classes.dex
 renamed.0=classes.dex
