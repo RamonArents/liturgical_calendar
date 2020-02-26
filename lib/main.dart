@@ -52,44 +52,52 @@ class _LiturgicalCalendarState extends State<LiturgicalCalendar> {
     super.initState();
     data = fetchData();
   }
-
-  String selectImage(String date){
-    if(date.endsWith('01-17')){
-      return 'images/saintanthony.png';
-    }else if(date.endsWith('01-21')){
-      return 'images/saintagnes.jpg';
-    }
-    else if(date.endsWith('01-24')){
-      return 'images/franciscusvansales.jpg';
-    }
-    else if(date.endsWith('01-25')){
-      return 'images/conversionstpaul.jpg';
-    }else if(date.endsWith('01-28')){
-      return 'images/thomasaquino.jpg';
-    }
-    else if(date.endsWith('01-31')){
-      return 'images/johnbosco.jpg';
-    }
-    else if(date.endsWith('02-02')){
-      return 'images/presentation.jpg';
-    }
-    else if(date.endsWith('02-05')){
-      return 'images/saintagatha.jpg';
-    }
-    else if(date.endsWith('02-06')){
-      return 'images/saintspaulmikicompanions.jpg';
-    }
-    else if(date.endsWith('02-10')){
-      return 'images/saintscholastica.jpg';
-    }
-    else if(date.endsWith('02-14')){
-      return 'images/saintcyrillus.jpg';
-    }
-    else if(date.endsWith('02-22')){
-      return 'images/stpeterchair.jpg';
-    }
-    else{
-      return 'images/default.jpeg';
+  /**
+   * Selects the right images for the day
+   * @param String date, String title
+   * @return String image path
+   */
+  String selectImage(String date, String title){
+    if(title == 'Ash Wednesday'){
+      return 'images/ashwednesday.jpg';
+    }else{
+      if(date.endsWith('01-17')){
+        return 'images/saintanthony.png';
+      }else if(date.endsWith('01-21')){
+        return 'images/saintagnes.jpg';
+      }
+      else if(date.endsWith('01-24')){
+        return 'images/franciscusvansales.jpg';
+      }
+      else if(date.endsWith('01-25')){
+        return 'images/conversionstpaul.jpg';
+      }else if(date.endsWith('01-28')){
+        return 'images/thomasaquino.jpg';
+      }
+      else if(date.endsWith('01-31')){
+        return 'images/johnbosco.jpg';
+      }
+      else if(date.endsWith('02-02')){
+        return 'images/presentation.jpg';
+      }
+      else if(date.endsWith('02-05')){
+        return 'images/saintagatha.jpg';
+      }
+      else if(date.endsWith('02-06')){
+        return 'images/saintspaulmikicompanions.jpg';
+      }
+      else if(date.endsWith('02-10')){
+        return 'images/saintscholastica.jpg';
+      }
+      else if(date.endsWith('02-14')){
+        return 'images/saintcyrillus.jpg';
+      }
+      else if(date.endsWith('02-22')){
+        return 'images/stpeterchair.jpg';
+      }
+      else{
+        return 'images/default.jpeg';
+      }
     }
   }
 
@@ -143,7 +151,7 @@ class _LiturgicalCalendarState extends State<LiturgicalCalendar> {
                   ),
                   //display the image (images should be saved in the images folder and defined in pubspec.yaml)
                   Image.asset(
-                    selectImage(date),
+                    selectImage(date, title),
                     height: 350,
                   ),
                   SizedBox(
